@@ -60,3 +60,17 @@ p{
     background-color: #00bcd4;
     color: #fff;
 }
+
+.image-content{
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+.image-content img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 1 4px 20px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+}
