@@ -1,11 +1,19 @@
 <nav class="navbar">
-    <div class="logo">Magdaline</div>
-    <ul class="nav-links">
-      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-      <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
-    </ul>
-  </nav>
-  
+  <div class="logo">Magdaline</div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" (click)="toggleMenu()" [class.open]="isMenuOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links" [class.active]="isMenuOpen">
+    <li><a routerLink="/home" (click)="closeMenu()">Home</a></li>
+    <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
+    <li><a routerLink="/projects" (click)="closeMenu()">Projects</a></li>
+    <li><a routerLink="/skills" (click)="closeMenu()">Skills</a></li>
+    <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
